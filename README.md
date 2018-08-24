@@ -35,7 +35,7 @@ sd-card: 9
 rpi3:    8
 
 SETS
-basic:   8
+basic:   8   (1 sd-card, 1 rpi3)
 
 $ inventory unset basic
 basic is unset
