@@ -5,8 +5,8 @@ import (
 	"strings"
 
 	"github.com/coreos/bbolt"
-	"github.com/tuhlz/errors"
-	"github.com/tuhlz/growtv/src/internal/storage"
+	"github.com/crit/inventory/internal/errors"
+	"github.com/crit/inventory/internal/storage"
 )
 
 func New(path string) (storage.Storage, error) {

@@ -11,7 +11,7 @@ import (
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/s3"
 	"github.com/aws/aws-sdk-go/service/s3/s3manager"
-	"github.com/tuhlz/growtv/src/internal/storage"
+	"github.com/crit/inventory/internal/storage"
 )
 
 const Separator = "-|-"

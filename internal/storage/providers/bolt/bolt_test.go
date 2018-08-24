@@ -5,9 +5,9 @@ import (
 	"os"
 	"testing"
 
+	"github.com/crit/inventory/internal/storage"
 	"github.com/rs/xid"
 	"github.com/stretchr/testify/assert"
-	"github.com/tuhlz/growtv/src/internal/storage"
 )
 
 func boltDbBuilder() (storage.Storage, func()) {

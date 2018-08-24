@@ -3,11 +3,11 @@ package providers
 import (
 	"path/filepath"
 
-	"github.com/tuhlz/growtv/src/internal/storage"
-	"github.com/tuhlz/growtv/src/internal/storage/providers/bolt"
-	"github.com/tuhlz/growtv/src/internal/storage/providers/dynamodb"
-	"github.com/tuhlz/growtv/src/internal/storage/providers/mock"
-	"github.com/tuhlz/growtv/src/internal/storage/providers/s3"
+	"github.com/crit/inventory/internal/storage"
+	"github.com/crit/inventory/internal/storage/providers/bolt"
+	"github.com/crit/inventory/internal/storage/providers/dynamodb"
+	"github.com/crit/inventory/internal/storage/providers/mock"
+	"github.com/crit/inventory/internal/storage/providers/s3"
 )
 
 func Mock(reporter func(db *mock.DB)) storage.Storage {

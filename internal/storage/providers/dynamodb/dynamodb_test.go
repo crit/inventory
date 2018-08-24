@@ -20,7 +20,7 @@ func init() {
 	}
 
 	config["region"] = os.Getenv("AWS_REGION")
-	config["table"] = os.Getenv("GROWTV_DYNAMODB_TABLE")
+	config["table"] = os.Getenv("INVENTORY_DYNAMODB_TABLE")
 }
 
 func TestDynamoDB(t *testing.T) {

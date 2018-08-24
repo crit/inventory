@@ -6,11 +6,11 @@ import (
 
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/session"
+	"github.com/crit/inventory/internal/errors"
+	"github.com/crit/inventory/internal/storage"
 	"github.com/rs/xid"
 	"github.com/stretchr/testify/assert"
 	"github.com/subosito/gotenv"
-	"github.com/tuhlz/errors"
-	"github.com/tuhlz/growtv/src/internal/storage"
 )
 
 var Session *session.Session
@@ -29,7 +29,7 @@ func init() {
 		panic(err.Error())
 	}
 
-	Bucket = aws.String(os.Getenv("GROWTV_BUCKET_TESTING"))
+	Bucket = aws.String(os.Getenv("INVENTORY_BUCKET_TESTING"))
 	if Bucket == nil {
 		panic("Bucket was not set")
 	}

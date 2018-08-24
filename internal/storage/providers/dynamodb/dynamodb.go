@@ -8,8 +8,8 @@ import (
 	"github.com/aws/aws-sdk-go/service/dynamodb"
 	"github.com/aws/aws-sdk-go/service/dynamodb/dynamodbattribute"
 	"github.com/aws/aws-sdk-go/service/dynamodb/expression"
-	"github.com/tuhlz/errors"
-	"github.com/tuhlz/growtv/src/internal/storage"
+	"github.com/crit/inventory/internal/errors"
+	"github.com/crit/inventory/internal/storage"
 )
 
 var _ storage.Storage = &db{} // compile check

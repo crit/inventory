@@ -1,7 +1,5 @@
 package storage
 
-import "github.com/rs/xid"
-
 type Item interface {
 	Key() string
 }
@@ -43,7 +41,3 @@ type Storage interface {
 type TypeDecoder func(key string) (ext string, contentType string)
 type KeyDecoder func(value string) (key, typ string)
 type KeyEncoder func(key, typ string) string
-
-func NextID() string {
-	return xid.New().String()
-}

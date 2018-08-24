@@ -5,7 +5,7 @@ import (
 
 	"github.com/aws/aws-sdk-go/aws/awserr"
 	"github.com/aws/aws-sdk-go/service/s3"
-	"github.com/tuhlz/errors"
+	"github.com/crit/inventory/internal/errors"
 )
 
 func toError(err error) error {

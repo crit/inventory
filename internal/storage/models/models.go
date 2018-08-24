@@ -4,8 +4,11 @@ import (
 	"sync"
 	"time"
 
-	"github.com/tuhlz/growtv/src/internal/storage"
-	"github.com/tuhlz/growtv/src/internal/storage/providers"
+	"encoding/json"
+
+	"github.com/crit/inventory/internal/storage"
+	"github.com/crit/inventory/internal/storage/providers"
+	"github.com/rs/xid"
 )
 
 var (
@@ -67,4 +70,17 @@ type Tracking struct {
 	CreatedAt time.Time `json:"created_at"`
 	UpdatedBy string    `json:"updated_by"`
 	UpdatedAt time.Time `json:"updated_at"`
+}
+
+func ToBytes(obj interface{}) []byte {
+	out, _ := json.Marshal(obj)
+	return out
+}
+
+func FromBytes(data []byte, obj interface{}) {
+	json.Unmarshal(data, obj)
+}
+
+func NextID() string {
+	return xid.New().String()
 }

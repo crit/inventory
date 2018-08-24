@@ -5,8 +5,8 @@ import (
 	"net/http"
 	"sync"
 
-	"github.com/tuhlz/errors"
-	"github.com/tuhlz/growtv/src/internal/storage"
+	"github.com/crit/inventory/internal/errors"
+	"github.com/crit/inventory/internal/storage"
 )
 
 func New(reporter func(db *DB)) storage.Storage {
